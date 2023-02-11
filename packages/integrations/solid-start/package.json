@@ -24,6 +24,7 @@
     "./*": "./*",
     "./client.js": "./dist/client.js",
     "./server.js": "./dist/server.js",
+    "./handler.js": "./dist/handler.js",
     "./package.json": "./package.json"
   },
   "scripts": {

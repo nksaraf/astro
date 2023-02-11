@@ -12,7 +12,6 @@ import {
 	Scripts,
 	Title,
 } from 'solid-start';
-import Nav from './components/nav';
 import './root.css';
 
 export default function Root() {
@@ -26,7 +25,6 @@ export default function Root() {
 				<Link rel="manifest" href="/manifest.webmanifest" />
 			</Head>
 			<Body>
-				<Nav />
 				<ErrorBoundary>
 					<Suspense fallback={<div class="news-list-nav">Loading...</div>}>
 						<Routes>

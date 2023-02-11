@@ -1,5 +1,5 @@
 import type { AstroConfig, AstroIntegration, AstroRenderer } from 'astro';
-import solidStart from '../../../solid-start/vite';
+import solidStart from 'solid-start/vite';
 import { getSolidPkgsConfig } from './dependencies.js';
 
 function getRenderer(): AstroRenderer {
@@ -62,8 +62,8 @@ export default function (): AstroIntegration {
 			'astro:config:setup': async ({ command, addRenderer, updateConfig, config, injectRoute }) => {
 				addRenderer(getRenderer());
 				injectRoute({
-					entryPoint: '@astrojs/solid-start/router.js',
-					pattern: '/*',
+					entryPoint: new URL('./entry-server.ts', config.srcDir).pathname,
+					pattern: '/[...all]',
 				});
 				updateConfig({ vite: await getViteConfiguration(command === 'dev', config) });
 			},
