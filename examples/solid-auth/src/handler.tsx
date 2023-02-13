@@ -7,16 +7,11 @@ let devEnv = {
 	},
 };
 
-import { createComponent } from 'solid-js';
-
 import { StartServer, createHandler, renderAsync } from 'solid-start/entry-server';
 
-export let startHandler = createHandler(
-	renderAsync((event) => createComponent(StartServer, { event }))
-);
+export let startHandler = createHandler(renderAsync((event) => <StartServer event={event} />));
 
-export const all = async ({ cookies, request, ...args }) => {
-	console.log(args);
+export let astroHandler = async ({ cookies, request }) => {
 	try {
 		const load = await startHandler({
 			request,

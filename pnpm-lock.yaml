@@ -267,6 +267,44 @@ importers:
     dependencies:
       astro: link:../../packages/astro
 
+  examples/solid-auth:
+    specifiers:
+      '@astrojs/node': ^5.0.3
+      '@astrojs/solid-js': ^2.0.2
+      '@astrojs/solid-start': workspace:^2.0.2
+      '@astrojs/svelte': ^2.0.1
+      '@auth/core': ^0.4.0
+      '@auth/solid-start': ^0.1.0
+      '@solidjs/meta': ^0.28.2
+      '@solidjs/router': ^0.5.0
+      astro: ^2.0.6
+      concurrently: ^7.2.1
+      solid-js: ^1.6.10
+      solid-start: ^0.2.20
+      solid-start-node: ^0.2.20
+      svelte: ^3.48.0
+      unocss: ^0.15.6
+      vite-imagetools: ^4.0.4
+      vite-plugin-inspect: ^0.7.15
+    dependencies:
+      '@astrojs/node': link:../../packages/integrations/node
+      '@astrojs/solid-js': link:../../packages/integrations/solid
+      '@astrojs/solid-start': link:../../packages/integrations/solid-start
+      '@astrojs/svelte': link:../../packages/integrations/svelte
+      '@auth/core': 0.4.0
+      '@auth/solid-start': 0.1.0_ewgec7ty5k7ajv6v7tnkbl7rxe
+      '@solidjs/meta': 0.28.2_solid-js@1.6.10
+      '@solidjs/router': 0.5.1_solid-js@1.6.10
+      astro: link:../../packages/astro
+      concurrently: 7.6.0
+      solid-js: 1.6.10
+      solid-start: link:../../packages/solid-start
+      solid-start-node: 0.2.20_u67nb3254kxzcfjo2tqp3smo4m
+      svelte: 3.55.1
+      unocss: 0.15.6
+      vite-imagetools: 4.0.18
+      vite-plugin-inspect: 0.7.15
+
   examples/solid-hackernews:
     specifiers:
       '@astrojs/node': ^5.0.3
@@ -4126,6 +4164,35 @@ packages:
       node-fetch: 3.3.0
     dev: false
 
+  /@auth/core/0.4.0:
+    resolution: {integrity: sha512-wHVljvVGPmKSjlxQUYZCOL4GGe26YqhT351sA2REE43YskaqRMYh1TVjBxpXcdG8/P8bw2DsHgl+aBEV3P5+KQ==}
+    peerDependencies:
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      '@panva/hkdf': 1.0.2
+      cookie: 0.5.0
+      jose: 4.11.4
+      oauth4webapi: 2.1.0
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3_preact@10.11.3
+    dev: false
+
+  /@auth/solid-start/0.1.0_ewgec7ty5k7ajv6v7tnkbl7rxe:
+    resolution: {integrity: sha512-nQHDWrP3c7uML0p+vKtGwun+CJh6TyloB8rOcwcZRtKRTRVK879ZCvxKa9pRExyZzQ8KCc+2K3+doQzxawblUg==}
+    peerDependencies:
+      '@auth/core': ~0.2.2 || ^0.2.2
+      solid-js: ^1.5.7
+      solid-start: ^0.2.1
+    dependencies:
+      '@auth/core': 0.4.0
+      set-cookie-parser: 2.5.1
+      solid-js: 1.6.10
+      solid-start: link:packages/solid-start
+    dev: false
+
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
     engines: {node: '>=6.9.0'}
@@ -6731,6 +6798,10 @@ packages:
     dependencies:
       '@octokit/openapi-types': 16.0.0
     dev: true
+
+  /@panva/hkdf/1.0.2:
+    resolution: {integrity: sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==}
+    dev: false
 
   /@parse5/tools/0.1.0:
     resolution: {integrity: sha512-VB9+4BsFoS+4HdB/Ph9jD4FHQt7GyiWESVNfBSh8Eu54LujWyy+NySGLjg8GZFWSZcESG72F67LjgmKZDZCvPg==}
@@ -12043,6 +12114,10 @@ packages:
       '@sideway/pinpoint': 2.0.0
     dev: false
 
+  /jose/4.11.4:
+    resolution: {integrity: sha512-94FdcR8felat4vaTJyL/WVdtlWLlsnLMZP8v+A0Vru18K3bQ22vn7TtpVh3JlgBFNIlYOUlGqwp/MjRPOnIyCQ==}
+    dev: false
+
   /js-sdsl/4.3.0:
     resolution: {integrity: sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==}
     dev: true
@@ -13370,6 +13445,10 @@ packages:
     resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==}
     dev: true
 
+  /oauth4webapi/2.1.0:
+    resolution: {integrity: sha512-0YjXQA3viCby/So8rja4sBrdLMTTyzuQTzotMTT6uAgqmqanrpt8eBfLLaugUZaMZSzt3IdjJdGadr5YTC+Cww==}
+    dev: false
+
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -14180,6 +14259,15 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /preact-render-to-string/5.2.3_preact@10.11.3:
+    resolution: {integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==}
+    peerDependencies:
+      preact: '>=10'
+    dependencies:
+      preact: 10.11.3
+      pretty-format: 3.8.0
+    dev: false
 
   /preact-render-to-string/5.2.6_preact@10.11.3:
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}

@@ -10,6 +10,7 @@ import { CompleteIcon, IncompleteIcon } from '~/components/icons';
 import db from '~/db';
 import { Todo } from '~/types';
 import '../root.css';
+import Hello from '../components/Hello.svelte';
 
 declare module 'solid-js' {
 	namespace JSX {
